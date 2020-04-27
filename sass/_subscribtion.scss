@@ -1,0 +1,42 @@
+.subscribtion {
+  padding: 8rem 0;
+
+  &__container {
+    @include container();
+  }
+
+  &__label {
+    color: #848789;
+    text-transform: none;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+
+  &__form {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+
+      input {
+          padding: 1rem;
+          width: 100%;
+          border: 1px solid #d3d7d9;
+
+          &:focus {
+              border: 1px solid #64c29e;
+          }
+      }
+
+      &__button {
+        padding: 1rem 2rem;
+        margin-left: 10px;
+        background-color: #64c29e;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+      }
+  }
+}

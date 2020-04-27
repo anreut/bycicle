@@ -1,0 +1,17 @@
+.cta {
+  background-color: #282f35;
+  padding: 4rem;
+
+  &__button {
+    display: block;
+    max-width: 300px;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    background-color: #282f35;
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+  }
+}

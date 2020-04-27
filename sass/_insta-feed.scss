@@ -1,0 +1,82 @@
+.insta-feed {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 270px);
+
+    &__cell-1 {
+        @include bg-cell('../img/insta-feed/insta-1.jpg');
+    }
+
+    &__cell-2 {
+        @include bg-cell('../img/insta-feed/insta-2.jpg');
+    }
+
+    &__cell-3 {
+        @include bg-cell('../img/insta-feed/insta-4.jpg');
+        grid-column: 3 / 3;
+        grid-row: 1 / span 2;
+    }
+
+    &__cell-4 {
+        @include bg-cell('../img/insta-feed/insta-5.jpg');
+        grid-column: 4 / 4;
+        grid-row: 1 / span 2;
+    }
+
+    &__cell-5 {
+        @include bg-cell('../img/insta-feed/insta-6.jpg');
+        grid-column: 5 / -1;
+    }
+
+    &__cell-6 {
+        @include bg-cell('../img/insta-feed/insta-3.jpg');
+        grid-column: 1 / span 2;
+    }
+
+    &__cell-7 {
+        @include bg-cell('../img/insta-feed/insta-7.jpg');
+    }
+
+    &__cell-8 {
+        @include bg-cell('../img/insta-feed/insta-8.jpg');
+    }
+
+    &__cell {
+        position: relative;
+        cursor: pointer;
+
+        &__inner {
+            color: #fff;
+            text-transform: uppercase;
+            z-index: 1;
+            opacity: 0;
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__cell::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #64c29e;
+        opacity: 0;
+    }
+    
+    &__cell:hover {
+        &:after {
+            opacity: 0.8;
+        }
+
+        .insta-feed__cell__inner {
+            opacity: 1;
+        }
+    }
+}

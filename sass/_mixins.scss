@@ -1,0 +1,52 @@
+@mixin container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+@mixin text-cell-content {
+  height: 400px;
+  text-align: center;
+  // align inner div
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  p {
+    text-align: left;
+  }
+}
+
+@mixin text-cell-content-inner {
+  max-width: 400px;
+  padding: 0 1rem;
+}
+
+@mixin text-cell-img($url) {
+  position: relative;
+  background: url($url) no-repeat center center;
+  background-size: cover;
+  height: 200px;
+}
+
+@mixin bg-cell($url) {
+  background: url($url) no-repeat center center;
+  background-size: cover;
+  // align logo
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+@mixin triangle {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background: url('../img/triangle.png') no-repeat center center;
+  width: 19px;
+  height: 10px;
+  transform: translateX(-50%);
+}

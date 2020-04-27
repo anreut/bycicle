@@ -1,0 +1,51 @@
+.footer {
+    background-color: #f7f7f7;
+    padding: 6rem 0;
+    font-size: 0.75rem;
+
+    &__container {
+        @include container();
+        text-align: left;
+        display: flex;
+      }
+    
+      &__info {
+        flex-basis: 50%;
+        min-width: 300px; 
+      }
+
+      &__social {
+        display: flex;
+        align-items: flex-end;
+
+        &__icon {
+            position: relative;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-right: 20px;
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 15px;
+                height: 15px;
+                fill: #fff;
+            }
+
+            &--facebook {
+                background-color: #537bbd;
+            }
+
+            &--twitter {
+                background-color: #78cdf0;
+            }
+
+            &--pinterest {
+                background-color: #eb5755;
+            }
+        }
+      }
+}

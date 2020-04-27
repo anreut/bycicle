@@ -1,0 +1,9 @@
+.intro {
+  position: relative;
+  padding: 10rem 0;
+  background-color: #f7f7f7;
+
+  &__container {
+      @include container;
+  }
+}

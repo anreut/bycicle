@@ -1,0 +1,59 @@
+.gallery {
+  display: grid;
+  grid-template-rows: repeat(3, 600px);
+  grid-template-columns: repeat(3, 1fr);
+
+  &__cell-1 {
+    @include bg-cell('../img/grid-1.jpg');
+    grid-column: 1 / span 2;
+  }
+
+  &__cell-2, &__cell-3, &__cell-6 {
+    display: grid;
+
+    &__content {
+      @include text-cell-content();
+
+      &__inner {
+        @include text-cell-content-inner();
+      }
+    }
+
+    &__img {
+      &::before {
+          @include triangle;
+      }
+    }
+  }
+
+  &__cell-2 {
+    &__img {
+      @include text-cell-img('../img/grid-2.jpg');
+    }
+  }
+  
+  &__cell-3 {
+    &__img {
+      @include text-cell-img('../img/grid-3.jpg');
+    }
+  }
+
+  &__cell-4 {
+    @include bg-cell('../img/grid-4.jpg');
+    grid-column: 2 / span 2;
+  }
+
+  &__cell-5 {
+    @include bg-cell('../img/grid-5.jpg');
+  }
+  
+  &__cell-6 {
+    &__img {
+      @include text-cell-img('../img/grid-6.jpg');
+    }
+  }
+
+  &__cell-7 {
+    @include bg-cell('../img/grid-7.jpg');
+  }
+}

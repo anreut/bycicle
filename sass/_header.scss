@@ -1,0 +1,29 @@
+.header {
+    position: absolute;
+    width: 100%;
+    padding: 2rem;
+
+    &__menu-list {
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        max-width: 620px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        align-items: center;
+
+        a {
+            color: $black-100;
+            font-size: 0.75rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            font-weight: 400;
+
+            &:hover {
+                font-weight: 600;
+            }
+        }
+    }
+}
